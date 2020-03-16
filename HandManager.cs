@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Accesses Oculus' hand tracking sdk to work in my favor.
+/// </summary>
 public class HandManager : MonoBehaviour
 {
     private Vector3 tempPos; // temporary position used for aligning finger tips properly.
@@ -70,7 +73,7 @@ public class HandManager : MonoBehaviour
         rightThumbZone.position = rightHand.Bones[19].Transform.parent.transform.position;
         rightThumbZone.position = Vector3.Reflect(rightThumbZone.position, Vector3.right);
         tempPos = rightThumbZone.position;
-        tempPos.z = rightThumbZone.position.z * -1; // needed to reflect each finger tip about the z axis for some reason. 
+        tempPos.z = rightThumbZone.position.z * -1; // needed to reflect each finger tip about the origin for some reason. 
         tempPos.y = tempPos.y + thumbOffSet;
         rightThumbZone.position = tempPos;
 
