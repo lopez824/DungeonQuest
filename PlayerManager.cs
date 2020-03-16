@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// WORK IN PROGRESS.
+/// </summary>
 public class PlayerManager : MonoBehaviour
 {
 
